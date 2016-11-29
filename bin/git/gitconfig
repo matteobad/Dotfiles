@@ -1,0 +1,8 @@
+[user]
+	name = matteobad
+	email = matteo.badini@studio.unibo.it
+[credential]
+	helper = osxkeychain
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global

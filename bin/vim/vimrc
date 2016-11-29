@@ -1,0 +1,100 @@
+" Vundle
+set nocompatible                " required
+filetype off                    " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()             " plugins start
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'sirver/ultisnips'
+call vundle#end()               " plugins end
+
+
+" General
+set history=500			        " lines of history to remember
+filetype plugin indent on		" enable filetype plugin	
+set autoread			        " reload if changed from outside
+
+
+" VIM user interface
+set ruler						" always show current position
+set wildmenu					" turn WiLd menu on	
+set hid 						" hid buffer when abandoned
+set backspace=indent,eol,start	" restore backspace
+set whichwrap+=<,>,h,l			
+set ignorecase					" ignore case while searching
+set smartcase					" be smart while searching
+set hlsearch					" highlight search result
+set incsearch					" search like modern browser
+set lazyredraw					" performance config
+set magic						" magic on for regex
+set mouse=a                     " enable mouse
+set showmatch					" show matching brackets
+set mat=2						" tenths of a sec to blink
+set noerrorbells				" no annoying sound on errors
+set novisualbell
+set t_vb=
+set tm=500
+set wildignore=*.o,*~,*.pyc		" ignore compiled files
+if has("win16") || has("win32")
+    set wildignore+=.git\*,.hg\*,.svn\*
+else
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
+
+" Colors and Fonts
+syntax enable					" enable syntax highlighting
+set background=dark				
+colorscheme solarized
+set encoding=utf8				" set encoding
+set ffs=unix,mac,dos			" set unix as standard file type
+
+
+" Files, backups and undo
+set nobackup
+set nowb
+set noswapfile
+
+
+" Text, tab and indent related
+set expandtab					" spaces instead tabs
+set smarttab
+set shiftwidth=4
+set tabstop=4
+set lbr							" linebreak on 500 chars
+set tw=500
+set ai							" auto indent
+set si							" smart indent
+set wrap						" wrap lines
+
+
+" Nerd Tree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif        " close NERDtree if last one open
+let g:NERDTreeWinPos = "left"
+let NERDTreeShowHidden=0
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+map <C-n> :NERDTreeToggle<CR>
+
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
