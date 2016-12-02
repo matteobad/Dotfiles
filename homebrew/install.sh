@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Check for Homebrew and install if we don't have it
 echo "Installing homebrew..."
-if test ! $(which brew); then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install if not present
+if [ ! $(which brew) ]; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null &> /dev/null
     echo "Homebrew installed"
 else
     echo "Homebrew already installed"
