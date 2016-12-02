@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# Bootstrap
 echo "Configuring machine..."
 
-echo "Applying all updates"
-sudo softwareupdate -vi -a
+# Update software
+source "macos/update.sh"
 
-echo "Installing command line"
-xcode-select --install
+# Install CLT
+source "macos/commandLineTools.sh"
 
 # Core
 source "homebrew/install.sh"
@@ -16,8 +15,8 @@ source "bin/install.sh"
 source "app/install.sh"
 source "bash/install.sh"
 source "zsh/install.sh"
-source "macos/install.sh"
+source "macos/config.sh"
 
 # Finish
-echo "The End :)"
+echo "Machine ready! Enjoy ;)"
 
