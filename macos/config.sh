@@ -23,7 +23,7 @@ sudo scutil --set LocalHostName "MacBook"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacBook"
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=%00
+sudo nvram SystemAudioVolume=" "
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
