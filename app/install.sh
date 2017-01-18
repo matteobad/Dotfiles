@@ -9,9 +9,9 @@ brew cask install iterm2
 brew cask install webstorm
 brew cask install skype
 brew cask install vlc
-brew cask install whatsapp
 brew cask install eclipse-java
 brew cask install spectacle
 brew cask install flux
+brew cask install postman
 
 echo "Apps Installed"
