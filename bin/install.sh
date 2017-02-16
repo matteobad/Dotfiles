@@ -15,7 +15,7 @@ brew install yarn
 
 # Configuring vim
 rm -rf ~/.vim ~/.vimrc ~/.vim-info
-ln -s ~/.dotfiles/bin/vim ~/.vim
+ln -s ~/Dotfiles/bin/vim ~/.vim
 vim -i NONE -c VundleUpdate -c quitall
 
 # Configuring git
