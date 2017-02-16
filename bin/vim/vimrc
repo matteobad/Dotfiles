@@ -52,7 +52,7 @@ endif
 set t_Co=256
 syntax enable					" enable syntax highlighting
 set background=dark
-colorscheme solarized
+#colorscheme solarized
 set encoding=utf8				" set encoding
 set ffs=unix,mac,dos			" set unix as standard file type
 

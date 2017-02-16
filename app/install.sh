@@ -13,5 +13,8 @@ brew cask install eclipse-java
 brew cask install spectacle
 brew cask install flux
 brew cask install postman
+brwe cask install atom
+brew cask install transmission
+
 
 echo "Apps Installed"

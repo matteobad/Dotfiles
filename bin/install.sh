@@ -11,6 +11,7 @@ brew install unrar
 brew install cmake
 brew install vim
 brew install git
+brew install yarn
 
 # Configuring vim
 rm -rf ~/.vim ~/.vimrc ~/.vim-info
@@ -19,7 +20,7 @@ vim -i NONE -c VundleUpdate -c quitall
 
 # Configuring git
 rm -f ~/.gitconfig ~/.gitignore ~/.gitignore_global
-ln -s ~/.dotfiles/bin/git/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/bin/git/gitignore_global ~/.gitignore_global
+ln -s ~/Dotfiles/bin/git/gitconfig ~/.gitconfig
+ln -s ~/Dotfiles/bin/git/gitignore_global ~/.gitignore_global
 
 echo "Binaries installed"
