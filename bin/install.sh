@@ -2,6 +2,7 @@
 
 echo "Installing binaries"
 
+brew install bash
 brew install coreutils
 brew install findutils
 brew install tree
